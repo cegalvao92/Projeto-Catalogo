@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1><a> Catálogo Game of Thrones </a></h1>
+        </article>
+        <ul>
+            <li id="home">
+                <a href="/">Home</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criar">Criar</a>
+            </li>
+            <li id="quem">
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Deletar Personagem</h1>
+    </header>
+
+    
+           
+    <section id="inscrever">
+        <form action="/deletar/<%= personagem.id %>" method="POST">
+            <div>
+                <label for="nome">Digite o nome do personagem: </label>
+                <input type="text" name="nome" id="nome" value="<%= personagem.nome %>">
+            </div>
+        
+            <div>
+                <label for="casa">Digite o nome da casa: </label>
+                <input type="text" name="casa" id="casa" value="<%= personagem.casa %>">
+            </div>
+            <div>
+                <label for="imagem">Coloque o link para a imagem do personagem: </label>
+                <input type="text" name="imagem" id="imagem" value="<%= personagem.imagem %>">
+            </div>
+            <div>
+                <label for="qtd_temporadas">Digite a qtd_temporadas do personagem: </label>
+                <input type="text" name="qtd_temporadas" id="qtd_temporadas" value="<%= personagem.qtd_temporadas %>">
+            </div>
+        
+            <button type="submit">DELETAR!</button>
+        </form>
+    </section>
+    
+    
+</body>
+</html>

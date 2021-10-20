@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1><a> Catálogo Game of Thrones </a></h1>
+        </article>
+        <ul>
+            <li id="home">
+                <a href="/">Home</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criar">Criar</a>
+            </li>
+            <li id="quem">
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Deletar Componente do Elenco</h1>
+    </header>
+
+        
+    <section id="inscrever">
+        <form action="/deletarElenco/<%= elenco.id %>" method="POST">
+            <div>
+                <label for="nome">Digite o nome do componente: </label>
+                <input type="text" name="nome" id="nome" placeholder="Nome da componente" value="<%= elenco.nome %>">
+            </div>
+        
+            <div>
+                <label for="funcao">Digite a função do componente: </label>
+                <input type="text" name="funcao" id="funcao" placeholder="Função do componente" value="<%= elenco.funcao %>">
+            </div>
+            <div>
+                <label for="nacionalidade">Digite a nacionalidade do componente: </label>
+                <input type="text" name="nacionalidade" id="nacionalidade" placeholder="Nacionalidade do componente" value="<%= elenco.nacionalidade %>">
+            </div>
+                    
+            <button type="submit">DELETAR!</button>
+        </form>
+    </section>
+    
+    
+</body>
+</html>

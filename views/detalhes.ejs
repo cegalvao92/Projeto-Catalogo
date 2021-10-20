@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do personagem</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="detalhes">
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1><a> Detalhes do Personagem </a></h1>
+        </article>
+        <ul>
+            <li id="home">
+                <a href="/">Home</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criar">Criar novo personagem</a>
+            </li>
+            <li id="quem">
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+    <header>
+        <h1>
+            
+            <span style="font-weight:200"></span>
+        </h1>
+    </header>
+    <h1 id="nomePersonagem"> <%= personagem.nome %> </h1>
+    <section id="details">
+        
+        <article>
+            <ul>
+                <a href="/">
+                    <img src="<%= personagem.imagem %>" width=200>
+                </a>
+                <li>Nome: <%= personagem.nome %></li>
+                <li>Casa: <%= personagem.casa %></li>
+                <li>Quantas temporadas participou: <%= personagem.qtd_temporadas %></li>
+            </ul>
+
+        </article> 
+
+        <div id="editar">
+            <a href="/deletar/<%= personagem.id %>" style="text-decoration:none" >Deletar Personagem</a>
+        </div>
+
+
+    </section> 
+
+    
+    
+    
+    
+    <script src="/js/script.js"></script>   
+</body>
+</html>
+    

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Casas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body id="casas">
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1>
+                <a href="/"> Catálogo Game of Thrones </a>
+            </h1>
+        </article>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <% if(mensagem != "") {  %>
+        <section id="message">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <header>
+        <h1>Criar Casa</h1>
+    </header>
+    <section id="inscrever">
+        <form action="/criarCasa" method="POST">
+            <div>
+                <label>Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" required>
+            </div>
+            <div>
+                <label>Brasão: </label>
+                <input type="text" name="brasao" id="brasao" placeholder="Digite o link da imagem do Brasão" required>
+            </div>
+            <div>
+                <label>Descrição: </label>
+                <input type="text" name="descricao" id="descricao" placeholder="Digite a descrição" required>
+            </div>
+                         
+            <button type="submit">Criar Casa</button>
+            
+        </form>
+    </section>
+    <script src="/js/script.js"></script>
+
+</body>
+</html>

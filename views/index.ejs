@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1><a> Catálogo Game of Thrones </a></h1>
+        </article>
+        <ul>
+            <li id="cadastro">
+                <a href="/criarCasa">Criar nova casa</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criar">Criar novo Personagem</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criarElenco">Criar Novo Componente</a>
+            </li>
+            <li id="quem">
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <% if(mensagem != "") {  %>
+        <section id="message">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <header>
+        <h1>Game of Thrones</h1>
+    </header>
+
+    <div class="inicial">
+
+        <h2>Personagens</h2>
+
+        <% personagens.forEach(item=> { %>
+            <section class="index">
+                <a class="card" href="/detalhes/<%= item.id %>">
+                    <img src="<%= item.imagem %>" alt="">
+                    <h2>
+                        <%= item.nome %>
+                    </h2>
+                    <h2>
+                        Casa: <%= item.casa %>
+                    </h2>
+                </a>
+                <div id="editar">
+                    <a href="/editar/<%= item.id %>" style="text-decoration:none">Editar</a>
+                </div>
+
+
+            </section>
+            <% }) %>
+
+
+    </div>
+
+    <div>
+        <h2>Casas</h2>
+
+        <% casas.forEach(item=> { %>
+            <section class="index">
+                <a class="card" href="/detalhesCasa/<%= item.id %>">
+                    <img src="<%= item.brasao %>" alt="">
+                    <h2>
+                        <%= item.nome %>
+                    </h2>
+
+                </a>
+                <div id="editar">
+                    <a href="/editarCasa/<%= item.id %>" style="text-decoration:none">Editar</a>
+                </div>
+
+            </section>
+            <% }) %>
+    </div>
+
+    <div>
+        <h2>Elenco</h2>
+
+        <% elenco.forEach(item=> { %>
+            <section class="index">
+                <a class="card" href="/detalhesElenco/<%= item.id %>">
+                    <img src="<%= item.imagem %>" alt="">
+                    <h2>
+                        <%= item.nome %>
+                    </h2>
+                    <h2>
+                        <%= item.funcao %>
+                    </h2>
+                    <h2>
+                        <%= item.nacionalidade %>
+                    </h2>
+
+                </a>
+
+                <div id="editar">
+                    <a href="/editarElenco/<%= item.id %>" style="text-decoration:none">Editar</a>
+                </div>
+            </section>
+
+            <% }) %>
+
+    </div>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

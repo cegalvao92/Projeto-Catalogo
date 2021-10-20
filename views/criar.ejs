@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Personagem</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body id="criar">
+    <nav>
+        <article>
+            <img id="logo" src="./img/game-of-thrones-logo.webp">
+            <h1>
+                <a href="/"> Catálogo Game of Thrones </a>
+            </h1>
+        </article>
+        <ul>
+            <ul>
+                <li id="home">
+                    <a href="/">Home</a>
+                </li>
+                <li id="quem">
+                    <a href="/quemSomos">Quem Somos</a>
+                </li>
+            </ul>
+        </ul>
+    </nav>
+
+    <% if(mensagem != "") {  %>
+        <section id="message">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <header>
+        <h1>Criar Personagem</h1>
+    </header>
+
+
+    <section id="inscrever">
+        <form action="/criar" method="POST">
+            <div>
+                <label for="nome">Nome: </label>
+                <input type="text" name="nome" id="nome" placeholder="Digite o nome" required>
+            </div>
+            <div>
+                <label for="casa">Nome da Casa: </label>
+                <input type="text" name="casa" id="casa" placeholder="Digite a casa" required>
+            </div>
+            <div>
+                <label for="qtd_temporadas">Quantidade de temporadas: </label>
+                <input type="text" name="qtd_temporadas" id="qtd_temporadas"
+                    placeholder="Digite a quantidade de temporadas do personagem" required>
+            </div>
+            <div>
+                <label for="imagem">Imagem: </label>
+                <input type="text" name="imagem" id="imagem" placeholder="Digite o link da imagem" required>
+            </div>
+
+            <button type="submit">Criar Personagem</button>
+
+
+        </form>
+    </section>
+    <script src="/js/script.js"></script>
+
+</body>
+
+</html>

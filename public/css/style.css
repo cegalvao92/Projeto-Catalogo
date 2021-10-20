@@ -1,0 +1,434 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+section#cadastrar form {
+    width: 100%;
+    padding: 3rem;
+}
+section#message {
+    padding: 1.5rem;
+    background-color: rgb(197, 255, 214);
+    color: #004d04;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  }
+
+  section#inscrever {
+    
+    padding: 3rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  section#inscrever form {
+    width: 50%;
+  }
+
+  section#inscrever form div input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    outline: none;
+    border: none;
+  }
+#editar{
+    border: 1px solid #3359ec;
+    background-color: #fff;
+    padding: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 20%;
+    font-size: 20px;
+
+    box-shadow: 0 0 1rem #ff0066;
+    border-radius: 1rem;
+    display: flex;
+    margin: 2rem;
+    background-color: orangered;
+
+
+}
+
+a.card h2 {
+    width: 15rem;
+    text-align: center;
+    padding: 2rem;
+    border: 4px solid grey;
+    border-radius: 10px;
+    font-family: fantasy;
+    font-size: 1em;
+}
+
+a.card h4 {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    color:grey;
+    border: 4px solid grey;
+    border-radius: 10px;
+    font-family: fantasy;
+    font-size: 1.5em;
+}
+
+section#details div#infos p {
+    font-size: 2rem;
+    padding-bottom: 3rem;
+}
+
+section#details div#infos div#info-datail {
+    background-color: #ccc;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem;
+    width: 60%;
+    border-radius: 1rem;
+}
+section#details div#infos div#info-datail h3 {
+    font-size: 2rem;
+    font-weight: 300;
+    padding: 0.5rem 0 1rem 0;
+}
+
+section#details div#infos h3 {
+    padding-top: 3rem;
+    font-size: 2rem;
+}
+
+section#details div#infos h2 {
+    background-color: rgb(255, 47, 47);
+    padding: 1rem;
+    color:black;
+    border-radius: 1rem;
+    width: 50%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+.carousel-control-next, .carousel-control-prev {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15%;
+    padding: 0;
+    color: black;
+    text-align: center;
+    background: 0 0;
+    border: 0;
+    opacity: .5;
+    transition: opacity .15s ease;
+}
+
+/* ///// */
+
+body {
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("https://imagem.band.com.br/f_296705.jpg");
+    background-size: cover;    
+}
+body#detalhes{
+    background-image: url(../img/detalhes.jpg);
+}
+body#criar{
+    background-image: url(../img/criar.jpg);
+}
+body#quemSomos{
+    min-height: 100%;
+    position: relative;
+   background-image: url(../img/quemSomos.jpg);
+   background-size: 100%;
+   background-position: 0 0;
+   background-size: cover;  
+}
+
+body#casas{
+    background-image: url(../img/backgoundCasas.jpg);
+ }
+
+div label{
+    color: orange;
+    font-size: 2rem;
+}
+h1 {
+    color: orange;
+    display: block;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h1 a{
+    color: orange;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    color: orange;
+    border: 4px solid grey;
+    border-radius: 10px;
+    background-color: black;
+
+}
+h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+h4 {
+    display: block;
+    margin-block-start: 1.33em;
+    margin-block-end: 1.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+nav {
+        background-color: #000;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        width: 100%;
+        padding-top: 5px;
+        top: 0;
+}
+nav article {
+    display: flex;
+    align-items: center;
+    margin: 0.5%;
+    padding: 0.5%;
+}
+#logo{
+    width: 8rem;
+    height: 5rem;
+    padding-right: 1rem;
+    padding-left: 1rem; 
+}
+nav ul li{
+    margin-right: 60px;
+    margin-top: 10px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.5s;
+}
+nav ul li a:hover{
+    color: #424e80;
+    font-size: 1.5rem; 
+}
+header {
+    padding-top: 7rem;
+    padding-bottom: 3rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header h1 {
+    font-size: 4rem;
+    font-style: italic;
+    text-align: center;    
+}
+section#details {
+    margin: 0 20rem 0 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffD;
+    border-radius: 2rem;
+    padding: 3rem;
+    box-shadow: 0 0 1rem #00000060;
+}
+section#inscrever form button {
+    border: 1px solid hsl(228, 39%, 45%);
+    background-color: #ffD;
+    color: #424e80;
+    padding: 1rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: 0.3s ease-out;
+    width: 35%;
+    font-size: 20px;
+  }
+form div{
+    padding: 2px;
+}
+form div input{
+    background-color: rgb(192, 205, 218);
+    margin: 5px;
+    padding: 3px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+}
+
+a.card {
+    width: 15rem;
+    height: 32rem;
+    padding: 3rem;
+    box-shadow: 0 0 1rem orange;
+    margin: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap; 
+    cursor: pointer;
+    transition: transform 0.5s;
+    background-color:transparent;
+    color: #000;
+    text-decoration: none;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTcGrdHT-AFMrA_mOZSUiWd_n4BrGxZiwYxg&usqp=CAU");
+}
+a.card:hover{
+   box-shadow: 0 0 1rem royalblue; 
+
+}
+a.card img {
+    width: 15rem;
+    height: 15rem;
+}
+a.card img:hover {
+    width: 18rem;
+    height: 18rem;
+}
+#nomePersonagem{
+    color: orange;
+    display: flex;
+    justify-content: center;
+    font-family: cursive;
+    font-size: 3rem;
+}
+.index{
+    margin: 25px;
+    display: inline-block;
+    width: 15%;
+}
+#index:hover{
+   width: 25%; 
+}
+
+section#message {
+    padding: 1.5rem;
+    background-color: rgb(60, 87, 163);
+    color: orange;
+    position: fixed;
+    top: 3rem;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  span#close {
+    font-size: 2rem;
+    cursor: pointer;
+    transition: .3s;
+  }
+  
+  span#close:hover{
+    color: rgb(255, 0, 0);
+    transform: scale(1.5);
+  }
+
+  /*Footer*/
+
+  footer {
+    position: absolute;
+    position: relative;
+    top: 520px;
+    bottom: 0;
+    background-color: darkolivegreen;
+    color: #FFF;
+    width: 100%;
+    height: 15%;    
+    text-align: center;
+    line-height: 80px;
+}
+
+div.card2{
+    width: 15rem;
+    height: 32rem;
+    padding: 3rem;
+    box-shadow: 0 0 1rem orange;
+    margin: 2rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-wrap: wrap;  
+    cursor: pointer;
+    transition: transform 0.5s;
+    /* background-color:transparent; */
+    text-decoration: none;
+    justify-content: center;
+    background-image: url("https://th.bing.com/th/id/OIP.d_TsbJskrz0CGH6UX6SbIAHaED?w=330&h=180&c=7&r=0&o=5&pid=1.7");
+    /* background-size: cover;  */
+}
+
+.somos{
+    display:flex;
+    justify-content:center;
+
+}
+
+div#qs{
+    color: orange;
+    vertical-align: middle;
+    display: table-cell;
+    /* align-items: center; */
+    justify-content: center;
+
+
+
+
+
+
+}

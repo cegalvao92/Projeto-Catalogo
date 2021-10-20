@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <nav>
+        <article>
+            <img id="logo" src="../img/game-of-thrones-logo.webp">
+            <h1><a> Catálogo Game of Thrones </a></h1>
+        </article>
+        <ul>
+            <li id="home">
+                <a href="/">Home</a>
+            </li>
+            <li id="cadastro">
+                <a href="/criar">Criar</a>
+            </li>
+            <li id="quem">
+                <a href="/quemSomos">Quem Somos</a>
+            </li>
+        </ul>
+    </nav>
+
+    <% if(mensagem != "") {  %>
+        <section id="message">
+            <p><%= mensagem %></p> <span id="close">&times;</span>
+        </section>
+    <% }  %>
+
+    <header>
+        <h1>Editar Casa</h1>
+    </header>
+
+    <section id="details">
+        <form action="/editarCasa/<%= casa.id %>" method="POST">
+            <div>
+                <label for="nome">Digite o nome da casa: </label>
+                <input type="text" name="nome" id="nome" placeholder="Nome da casa" value="<%= casa.nome %>">
+            </div>
+        
+            <div>
+                <label for="brasao">Digite o link do brasao: </label>
+                <input type="text" name="brasao" id="brasao" placeholder="Nome do brasao" value="<%= casa.brasao %>">
+            </div>
+
+            <div>
+                <label for="descricao">Coloque a descricao da casa: </label>
+                <input type="text" name="descricao" id="descricao" placeholder="Descricao da casa" value="<%= casa.descricao %>">
+            </div>            
+        
+            <button type="submit">Editar</button>
+        </form>
+    </section>
+    
+</body>
+</html>
